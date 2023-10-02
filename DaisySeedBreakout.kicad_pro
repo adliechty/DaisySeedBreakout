@@ -879,10 +879,6 @@
       "GPIO_Conn9"
     ],
     [
-      "2e226183-1e2b-4701-b55b-84ea17b1e4c7",
-      "GPIO_Conn10"
-    ],
-    [
       "f5156645-0c13-49e0-bd31-8dcbfb570fcd",
       "GPIO_Conn11"
     ],
@@ -905,6 +901,10 @@
     [
       "0f869182-0545-465a-951d-d9d2cc6b23cc",
       "MIDI_IN"
+    ],
+    [
+      "b269dd26-915f-458b-a2d7-e1fbc9f1daa5",
+      "ClassD_20W_Amp"
     ]
   ],
   "text_variables": {}
