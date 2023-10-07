@@ -1,7 +1,7 @@
 {
   "board": {
     "active_layer": 0,
-    "active_layer_preset": "TonyL_Bottom",
+    "active_layer_preset": "TonyL_Top",
     "auto_track_width": true,
     "hidden_netclasses": [],
     "hidden_nets": [],
@@ -64,7 +64,7 @@
       39,
       40
     ],
-    "visible_layers": "fe01030_ffffffff",
+    "visible_layers": "fe01010_fffffffe",
     "zone_display_mode": 0
   },
   "meta": {
