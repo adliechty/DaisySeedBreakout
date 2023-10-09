@@ -763,20 +763,12 @@
       "microSD"
     ],
     [
-      "aab26711-aaaa-4036-909f-ecfd3f2c014e",
-      "arduino_coprocessor"
-    ],
-    [
       "8edb4e87-22fe-4415-a59d-3c6e3164f7d2",
       "MIDI_OUT"
     ],
     [
       "0f869182-0545-465a-951d-d9d2cc6b23cc",
       "MIDI_IN"
-    ],
-    [
-      "b269dd26-915f-458b-a2d7-e1fbc9f1daa5",
-      "ClassD_20W_Amp"
     ]
   ],
   "text_variables": {}
