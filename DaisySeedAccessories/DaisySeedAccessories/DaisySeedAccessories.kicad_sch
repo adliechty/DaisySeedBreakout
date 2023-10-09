@@ -8,6 +8,23 @@
   )
 
 
+  (sheet (at 154.94 96.52) (size 38.1 16.51) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 0f60a6ff-7540-465b-9f59-804e6fc8018e)
+    (property "Sheetname" "SpeakerDriver20W" (at 154.94 95.8084 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "SpeakerDriver20W.kicad_sch" (at 154.94 113.6146 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "DaisySeedAccessories"
+        (path "/f4e212fd-fab8-40de-a317-91335511a529" (page "7"))
+      )
+    )
+  )
+
   (sheet (at 91.44 64.77) (size 38.1 13.97) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
@@ -133,6 +150,23 @@
     (instances
       (project "DaisySeedAccessories"
         (path "/f4e212fd-fab8-40de-a317-91335511a529" (page "2"))
+      )
+    )
+  )
+
+  (sheet (at 91.44 123.19) (size 38.1 15.24) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid c2d57dc6-bf3b-4eed-bd25-18a5fdd6b0c3)
+    (property "Sheetname" "ArduinoCompanion" (at 91.44 122.4784 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "ArduinoCompanion.kicad_sch" (at 91.44 139.0146 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "DaisySeedAccessories"
+        (path "/f4e212fd-fab8-40de-a317-91335511a529" (page "8"))
       )
     )
   )

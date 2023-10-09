@@ -491,6 +491,14 @@
     [
       "8e1513e3-cddf-44e7-8358-73b6b8f005aa",
       "CV_to_3p3V_AI"
+    ],
+    [
+      "0f60a6ff-7540-465b-9f59-804e6fc8018e",
+      "SpeakerDriver20W"
+    ],
+    [
+      "c2d57dc6-bf3b-4eed-bd25-18a5fdd6b0c3",
+      "ArduinoCompanion"
     ]
   ],
   "text_variables": {}
