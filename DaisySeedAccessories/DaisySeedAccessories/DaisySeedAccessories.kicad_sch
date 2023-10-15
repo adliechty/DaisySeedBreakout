@@ -1485,6 +1485,23 @@
     )
   )
 
+  (sheet (at 215.9 82.55) (size 39.37 20.32) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid dbffa040-2262-4b7a-bb0f-91e19e128ef3)
+    (property "Sheetname" "12V_To_5V" (at 215.9 81.8384 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "12V_To_5V.kicad_sch" (at 215.9 103.4546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "DaisySeedAccessories"
+        (path "/f4e212fd-fab8-40de-a317-91335511a529" (page "9"))
+      )
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
   )
