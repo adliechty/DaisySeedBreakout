@@ -355,7 +355,7 @@
     (property "Value" "Conn_01x03" (at 127 72.39 90)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "HeadersWithSolderHoles:PinHeader_1x03_P2.54mm_Vertical_Female_WithSolderHoles" (at 129.54 79.375 0)
+    (property "Footprint" "FemaleHeaders:PinHeader_1x03_P2.54mm_Vertical_Female" (at 129.54 79.375 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 129.54 72.39 0)

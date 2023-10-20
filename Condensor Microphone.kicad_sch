@@ -597,7 +597,7 @@
     (property "Value" "Conn_01x02" (at 95.25 106.426 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Footprint" "HeadersWithSolderHoles:PinHeader_1x02_P2.54mm_VerticalFemale_WithSolderHoles" (at 95.885 104.521 0)
+    (property "Footprint" "1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale" (at 95.885 104.521 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 95.25 108.966 0)
