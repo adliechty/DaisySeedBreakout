@@ -677,6 +677,57 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
+        "via_diameter": 0.5172,
+        "via_drill": 0.254,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.127,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Analog",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.25,
+        "via_diameter": 0.5172,
+        "via_drill": 0.254,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.127,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Digital",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.239,
+        "via_diameter": 0.5172,
+        "via_drill": 0.254,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.127,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
@@ -689,8 +740,88 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Default",
+        "netclass": "Power",
         "pattern": "+3.3V"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "Analog"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/AO_1"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/AO_0"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/AI_6"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/AI_7"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/DIO*"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/AI_*"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MIDI_*"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MIDI_UART*"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/Audio In/*"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/Audio Out/*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3.3*"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "*5V*"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/USB_n"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/USB_p"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/SD_*"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MIDI_IN/*"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MIDI_OUT/*"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/Condensor Microphone/*"
+      },
+      {
+        "netclass": "Analog",
+        "pattern": "/Mic_OUT"
       }
     ]
   },
@@ -767,14 +898,6 @@
     [
       "e07e79f0-bef5-432f-b85e-bb16f66114f9",
       "microSD"
-    ],
-    [
-      "8edb4e87-22fe-4415-a59d-3c6e3164f7d2",
-      "MIDI_OUT"
-    ],
-    [
-      "0f869182-0545-465a-951d-d9d2cc6b23cc",
-      "MIDI_IN"
     ]
   ],
   "text_variables": {}
