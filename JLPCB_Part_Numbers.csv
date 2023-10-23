@@ -1,0 +1,45 @@
+Comment,Footprint,LCSC Part #
+Electrosmith_Daisy_Seed_Rev4 Daisy is an embedded platform for music.,Electrosmith_Daisy_Seed,HAND PLACE
+0.1uF 0402 Unpolarized capacitor,C_0402_1005Metric,C1525
+10U Unpolarized capacitor,C_0805_2012Metric,C15850
+100uF Unpolarized capacitor,C_1210_3225Metric,C15008
+DNP_100uF Unpolarized capacitor,C_1210_3225Metric,DNP
+100pF COG Unpolarized capacitor,C_0402_1005Metric,C1546
+1uF Unpolarized capacitor,C_0603_1608Metric,C15849
+DNP Unpolarized capacitor,C_0402_1005Metric,DNP
+"SS54 SMC Schottky diode, 40V, 5A, Alternate KiCAD Library",D_SMA,C22452
+MountingHole Mounting Hole without connection,MountingHole_3.2mm_M3_DIN965_Pad,DNP
+Conn_01x03 HEADER 1x3 MALE PINS 0.100” 180deg,PinHeader_1x03_P2.54mm_Vertical_Female,HAND PLACE
+Conn_01x02 HEADER 1x2 MALE PINS 0.100” 180deg,PinHeader_1x02_P2.54mm_VerticalFemale,HAND PLACE
+5027740891 ,CONN_5027740891_MOL,C330255
+"Conn_01x04 Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",PinHeader_1x04_P2.54mm_Vertical_Female,HAND PLACE
+USB_B_Micro USB Micro Type B connector,USB_Micro-B_Molex-105017-0001,C136000
+Conn_02x04 HEADER 2x4 MALE PINS 0.100” 180deg,PinHeader_2x04_P2.54mm_Vertical_Female,HAND PLACE
+"Conn_01x06 Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)",PinHeader_1x06_P2.54mm_Vertical_Female,HAND PLACE
+"Pins_02x10_P2.54mm_TH Header 2x10 Pins, Pitch=1.27mm, Pin Height=3mm, Vertical, TH",PinHeader_2x10_P2.54mm_Vertical,HAND PLACE
+"Conn_01x10 Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)",PinHeader_1x10_P2.54mm_Vertical,HAND PLACE
+"47k Resistor, US symbol",R_0402_1005Metric,C25792
+"10k Resistor, US symbol",R_0402_1005Metric,C25744
+"0 Resistor, US symbol",R_0402_1005Metric,C17168
+"2.2k Resistor, US symbol",R_0402_1005Metric,C25879
+"1M Resistor, US symbol",R_0402_1005Metric,C26083
+"100k Resistor, US symbol",R_0402_1005Metric,C25741
+"100 Resistor, US symbol",R_0402_1005Metric,C25076
+"DNP Resistor, US symbol",R_0402_1005Metric,DNP
+"4.7k Resistor, US symbol",R_0402_1005Metric,C25900
+"10 Resistor, US symbol",R_0402_1005Metric,C25077
+"33 Resistor, US symbol",R_0402_1005Metric,C25105
+"220 Resistor, US symbol",R_0402_1005Metric,C25091
+"470 Resistor, US symbol",R_0402_1005Metric,C25117
+H11L1M OPTOISO 4.17KV OPN COLL 6DIP,DIP-6_W7.62mm,C16587
+MAX4466EXK_T IC PREAMP AUDIO MONO AB SC70-5,SOT-353,C7456762
+~ ,D8_TEX,C206212
+"LIS2DE12 3-Axis Accelerometer, 2/4/8/16g range, I2C/SPI interface",LGA-12_2x2mm_P0.5mm,C155639
+TLV9062IDR ,D0008A_N,C398355
+TPD2EUSB30ADRTR ,DRT3,C2997271
+"D_Schottky Schottky diode, small symbol",D_SOD-323,C191023
+5027740891 ,CONN9_0185-02_GSW,C5155564
+,,
+,,
+,,
+,,
