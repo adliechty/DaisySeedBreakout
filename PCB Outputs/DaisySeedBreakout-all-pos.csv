@@ -18,6 +18,7 @@ Ref,Val,Package,PosX,PosY,Rot,Side
 "C25","0.1uF 0402","C_0402_1005Metric",132.283200,-79.222600,90.000000,bottom
 "C26","0.1uF 0402","C_0402_1005Metric",131.530140,-72.613767,0.000000,bottom
 "D1","D_Schottky","D_SOD-323",150.418800,-74.752200,90.000000,bottom
+"J4","5027740891","CONN9_0185-02_GSW",139.980600,-47.736400,0.000000,bottom
 "R1","47k","R_0402_1005Metric",147.904200,-50.444400,90.000000,bottom
 "R2","47k","R_0402_1005Metric",146.659600,-50.444400,90.000000,bottom
 "R3","47k","R_0402_1005Metric",142.265400,-50.622200,90.000000,bottom
@@ -52,6 +53,7 @@ Ref,Val,Package,PosX,PosY,Rot,Side
 "U2","MAX4466EXK_T","SOT-353",131.453633,-69.337167,90.000000,bottom
 "U4","LIS2DE12","LGA-12_2x2mm_P0.5mm",143.433800,-79.705200,-90.000000,bottom
 "U10","TPD2EUSB30ADRTR","DRT3",155.879800,-37.465000,-90.000000,bottom
+"A1","Electrosmith_Daisy_Seed_Rev4","Electrosmith_Daisy_Seed",137.945689,-34.923747,0.000000,top
 "C3","0.1uF 0402","C_0402_1005Metric",149.479000,-35.653100,90.000000,top
 "C14","0.1uF 0402","C_0402_1005Metric",142.064784,-54.132752,180.000000,top
 "C15","0.1uF 0402","C_0402_1005Metric",148.996400,-38.938200,-90.000000,top
@@ -66,6 +68,30 @@ Ref,Val,Package,PosX,PosY,Rot,Side
 "C71","DNP","C_0402_1005Metric",144.163227,-73.953230,180.000000,top
 "D2","SS54","D_SMA",146.685000,-37.236400,-90.000000,top
 "D3","SS54","D_SMA",142.900400,-37.287200,-90.000000,top
+"J1","Conn_01x03","PinHeader_1x03_P2.54mm_Vertical_Female",163.678752,-77.233367,0.000000,top
+"J2","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",130.556000,-81.885000,0.000000,top
+"J3","Conn_01x03","PinHeader_1x03_P2.54mm_Vertical_Female",166.345752,-77.233367,0.000000,top
+"J5","Conn_01x04","PinHeader_1x04_P2.54mm_Vertical_Female",157.480000,-43.805000,180.000000,top
+"J6","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",130.278896,-41.177130,90.000000,top
+"J7","Conn_01x04","PinHeader_1x04_P2.54mm_Vertical_Female",160.655000,-76.835000,0.000000,top
+"J8","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",133.289018,-76.933900,180.000000,top
+"J9","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",162.560000,-41.275000,0.000000,top
+"J10","Conn_01x03","PinHeader_1x03_P2.54mm_Vertical_Female",157.480000,-74.295000,90.000000,top
+"J11","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",133.096000,-81.885000,0.000000,top
+"J12","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",130.556000,-63.373000,0.000000,top
+"J13","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",133.096000,-63.373000,0.000000,top
+"J14","Conn_01x03","PinHeader_1x03_P2.54mm_Vertical_Female",157.480000,-71.755000,90.000000,top
+"J15","USB_B_Micro","USB_Micro-B_Molex-105017-0001",131.539500,-47.990000,-90.000000,top
+"J16","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",165.100000,-41.275000,0.000000,top
+"J17","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",130.598707,-74.295000,0.000000,top
+"J18","Conn_02x04","PinHeader_2x04_P2.54mm_Vertical_Female",154.940000,-86.995000,-90.000000,top
+"J19","Conn_01x06","PinHeader_1x06_P2.54mm_Vertical_Female",157.480000,-76.835000,0.000000,top
+"J20","Conn_01x04","PinHeader_1x04_P2.54mm_Vertical_Female",160.020000,-43.805000,180.000000,top
+"J21","Conn_02x04","PinHeader_2x04_P2.54mm_Vertical_Female",144.780000,-86.995000,-90.000000,top
+"J23","Pins_02x10_P2.54mm_TH","PinHeader_2x10_P2.54mm_Vertical",157.480000,-46.355000,0.000000,top
+"J24","Conn_01x10","PinHeader_1x10_P2.54mm_Vertical",162.542600,-46.355000,0.000000,top
+"J25","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",130.759515,-55.880000,0.000000,top
+"J26","Conn_01x02","PinHeader_1x02_P2.54mm_VerticalFemale",133.299515,-55.880000,0.000000,top
 "R8","0","R_0402_1005Metric",146.948467,-65.131804,0.000000,top
 "R17","100k","R_0402_1005Metric",131.324340,-69.210167,180.000000,top
 "R20","10k","R_0402_1005Metric",129.806556,-68.966658,90.000000,top
@@ -80,4 +106,6 @@ Ref,Val,Package,PosX,PosY,Rot,Side
 "R60","DNP","R_0402_1005Metric",148.579884,-55.885352,90.000000,top
 "R61","DNP","R_0402_1005Metric",145.618200,-63.906400,0.000000,top
 "R66","0","R_0402_1005Metric",146.240385,-73.967125,0.000000,top
+"U1","H11L1M","DIP-6_W7.62mm",148.044865,-76.189884,-90.000000,top
+"U3","~","D8_TEX",145.763049,-69.480758,-90.000000,top
 "U7","TLV9062IDR","D0008A_N",145.178284,-58.820752,90.000000,top

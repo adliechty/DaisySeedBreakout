@@ -16,4 +16,6 @@ merged = pd.merge(df, df_part_numbers, on=['Comment', 'Footprint'], how='left')
 # Save the updated DataFrame back to file1
 merged['LCSC Part #'] = merged['LCSC Part #_y']
 merged = merged.drop(columns=['LCSC Part #_x', 'LCSC Part #_y'])
-merged.to_csv('updated_file1.csv', index=False)
+merged = merged[merged['LCSC Part #'] != "HAND PLACE"]
+merged = merged[merged['LCSC Part #'] != "DNP"]
+merged.to_csv('JLPCB_BOM.csv', index=False)
