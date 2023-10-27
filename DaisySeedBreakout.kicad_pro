@@ -820,6 +820,10 @@
       {
         "netclass": "Analog",
         "pattern": "/Mic_OUT"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "GND"
       }
     ]
   },
