@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Git\DaisySeedBreakout\DaisySeedBreakout.kicad_sch</source>
-    <date>10/23/2023 7:49:45 PM</date>
+    <date>10/28/2023 11:25:18 PM</date>
     <tool>Eeschema 7.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -98,7 +98,7 @@
   <components>
     <comp ref="A1">
       <value>Electrosmith_Daisy_Seed_Rev4</value>
-      <footprint>ElectgrosmithSurfaceMountModule:Electrosmith_Daisy_Seed</footprint>
+      <footprint>DaisySeedThroughHold:Electrosmith_Daisy_Seed</footprint>
       <datasheet>https://static1.squarespace.com/static/58d03fdc1b10e3bf442567b8/t/6227e6236f02fb68d1577146/1646781988478/Daisy_Seed_datasheet_v1.0.3.pdf</datasheet>
       <libsource lib="MCU_Module" part="Electrosmith_Daisy_Seed_Rev4" description="Daisy is an embedded platform for music."/>
       <property name="Sheetname" value=""/>
@@ -109,87 +109,100 @@
       <tstamps>6a9adb1b-ab7b-4c9f-8e3c-eddf6c693676</tstamps>
     </comp>
     <comp ref="C2">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>08c4cf89-29db-4c4b-8c1c-2256bb12ea67</tstamps>
+      <tstamps>e288c318-5e68-4e2e-bc4f-a5b069652241</tstamps>
     </comp>
     <comp ref="C3">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
-        <field name="MnfNumber">FCC0402B104K160AT</field>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="MnfNumber" value="FCC0402B104K160AT"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>56d18712-fab2-4233-8ec2-8f8c6a1e0819</tstamps>
+      <tstamps>14822a5c-ea20-45ef-aaef-78c75865c431</tstamps>
     </comp>
     <comp ref="C6">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>96f06249-b2b2-4eea-a7c2-51180a140f5c</tstamps>
-    </comp>
-    <comp ref="C7">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
-      <fields>
-        <field name="Specs">0603, 16V</field>
-      </fields>
-      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
-      <property name="Specs" value="0603, 16V"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor, small symbol"/>
-      <property name="ki_keywords" value="capacitor cap"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>0e18e24c-2be8-44f6-98fb-7f04ffca7922</tstamps>
+      <tstamps>a5a029af-93d4-436a-a3b1-c1b863a8f114</tstamps>
     </comp>
     <comp ref="C8">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
-      <property name="ki_description" value="Unpolarized capacitor"/>
-      <property name="ki_keywords" value="cap capacitor"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>e9bb4654-7364-4a7c-987d-28a64f67c129</tstamps>
-    </comp>
-    <comp ref="C9">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
-        <field name="MnfNumber">FCC0402B104K160AT</field>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="MnfNumber" value="FCC0402B104K160AT"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>f29a8b59-e205-43c9-891c-c97b783caa55</tstamps>
+      <tstamps>393f1cd3-1527-4d0a-a149-80a02a09c70c</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5fd36b5b-bb85-44f2-a0c6-1e268eb8aebe</tstamps>
     </comp>
     <comp ref="C10">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -198,24 +211,32 @@
       <tstamps>c8d58ec6-0eb1-49e8-8b37-e8c29671ced3</tstamps>
     </comp>
     <comp ref="C15">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
-        <field name="MnfNumber">FCC0402B104K160AT</field>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="MnfNumber" value="FCC0402B104K160AT"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1f849355-5c2b-4705-9232-0011cd075f33</tstamps>
+      <tstamps>68d965ce-f8e9-4dcd-808e-f113ce3d133f</tstamps>
     </comp>
     <comp ref="C16">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -224,24 +245,34 @@
       <tstamps>a2efe0f6-36a1-4254-a05e-91c46562cc41</tstamps>
     </comp>
     <comp ref="C18">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>1989352e-30fc-45fa-a752-7b849e6ae324</tstamps>
+      <tstamps>38fa2b58-c71e-4dd7-a99a-1d1518e1689d</tstamps>
     </comp>
     <comp ref="C19">
       <value>100uF</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
       <fields>
         <field name="MnfNumber">CL21F106ZPFNNNE</field>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="MnfNumber" value="CL21F106ZPFNNNE"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -252,7 +283,13 @@
     <comp ref="C20">
       <value>DNP_100uF</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -263,7 +300,13 @@
     <comp ref="C21">
       <value>DNP_100uF</value>
       <footprint>Capacitor_SMD:C_1210_3225Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -272,15 +315,21 @@
       <tstamps>08b55b62-95be-45e9-bc74-1ca56aba7742</tstamps>
     </comp>
     <comp ref="C22">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>92b8a629-d2fa-4bcd-9d48-8e0974cd590a</tstamps>
+      <tstamps>8894727b-1b2d-4cda-8321-589ee93fcf4a</tstamps>
     </comp>
     <comp ref="D1">
       <value>D_Schottky</value>
@@ -299,9 +348,13 @@
     </comp>
     <comp ref="D2">
       <value>SS54</value>
-      <footprint>Diode_SMD:D_SMA</footprint>
+      <footprint>Diode_SMD_AKL:D_SMC</footprint>
       <datasheet>https://www.laro.com.pl/pdf/ss56.pdf</datasheet>
+      <fields>
+        <field name="MnfNumber">SS54FSH</field>
+      </fields>
       <libsource lib="Diode_Schottky_AKL" part="SS54" description="SMC Schottky diode, 40V, 5A, Alternate KiCAD Library"/>
+      <property name="MnfNumber" value="SS54FSH"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="SMC Schottky diode, 40V, 5A, Alternate KiCAD Library"/>
@@ -311,9 +364,13 @@
     </comp>
     <comp ref="D3">
       <value>SS54</value>
-      <footprint>Diode_SMD:D_SMA</footprint>
+      <footprint>Diode_SMD_AKL:D_SMC</footprint>
       <datasheet>https://www.laro.com.pl/pdf/ss56.pdf</datasheet>
+      <fields>
+        <field name="MnfNumber">SS54FSH</field>
+      </fields>
       <libsource lib="Diode_Schottky_AKL" part="SS54" description="SMC Schottky diode, 40V, 5A, Alternate KiCAD Library"/>
+      <property name="MnfNumber" value="SS54FSH"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="SMC Schottky diode, 40V, 5A, Alternate KiCAD Library"/>
@@ -370,13 +427,13 @@
       <footprint>FemaleHeaders:PinHeader_1x03_P2.54mm_Vertical_Female</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0301FBV0T</field>
+        <field name="Part Number">RS1-03-G</field>
         <field name="Specifications">HEADER 1x3 MALE PINS 0.100” 180deg</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x03" description="HEADER 1x3 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0301FBV0T"/>
+      <property name="Part Number" value="RS1-03-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
@@ -389,13 +446,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -408,13 +465,13 @@
       <footprint>FemaleHeaders:PinHeader_1x03_P2.54mm_Vertical_Female</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0301FBV0T</field>
+        <field name="Part Number">RS1-03-G</field>
         <field name="Specifications">HEADER 1x3 MALE PINS 0.100” 180deg</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x03" description="HEADER 1x3 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0301FBV0T"/>
+      <property name="Part Number" value="RS1-03-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
@@ -425,7 +482,11 @@
     <comp ref="J5">
       <value>Conn_01x04</value>
       <footprint>FemaleHeaders:PinHeader_1x04_P2.54mm_Vertical_Female</footprint>
+      <fields>
+        <field name="Part Number">RS1-04-G</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Part Number" value="RS1-04-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
@@ -438,13 +499,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -468,13 +529,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -487,13 +548,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -506,13 +567,13 @@
       <footprint>FemaleHeaders:PinHeader_1x03_P2.54mm_Vertical_Female</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0301FBV0T</field>
+        <field name="Part Number">RS1-03-G</field>
         <field name="Specifications">HEADER 1x3 MALE PINS 0.100” 180deg</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x03" description="HEADER 1x3 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0301FBV0T"/>
+      <property name="Part Number" value="RS1-03-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
@@ -525,13 +586,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -544,13 +605,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -563,13 +624,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -582,13 +643,13 @@
       <footprint>FemaleHeaders:PinHeader_1x03_P2.54mm_Vertical_Female</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0301FBV0T</field>
+        <field name="Part Number">RS1-03-G</field>
         <field name="Specifications">HEADER 1x3 MALE PINS 0.100” 180deg</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x03" description="HEADER 1x3 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0301FBV0T"/>
+      <property name="Part Number" value="RS1-03-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x3 MALE PINS 0.100” 180deg"/>
@@ -616,13 +677,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -663,7 +724,11 @@
     <comp ref="J20">
       <value>Conn_01x04</value>
       <footprint>FemaleHeaders:PinHeader_1x04_P2.54mm_Vertical_Female</footprint>
+      <fields>
+        <field name="Part Number">RS1-04-G</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Part Number" value="RS1-04-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
@@ -694,10 +759,12 @@
       <value>Pins_02x10_P2.54mm_TH</value>
       <footprint>2x10FemaleHeader:PinHeader_2x10_P2.54mm_Vertical</footprint>
       <fields>
+        <field name="Part Number">RS2-20-G</field>
         <field name="Specifications">Header 2x10 Pins, Pitch=2.54mm, Pin Height=3mm, Vertical, TH</field>
       </fields>
       <libsource lib="Ultralibrarian_modified_symbols" part="Pins_02x10_P2.54mm_TH" description="Header 2x10 Pins, Pitch=1.27mm, Pin Height=3mm, Vertical, TH"/>
       <property name="Specifications" value="Header 2x10 Pins, Pitch=2.54mm, Pin Height=3mm, Vertical, TH"/>
+      <property name="Part Number" value="RS2-20-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Header 2x10 Pins, Pitch=1.27mm, Pin Height=3mm, Vertical, TH"/>
@@ -707,8 +774,12 @@
     </comp>
     <comp ref="J24">
       <value>Conn_01x10</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical</footprint>
+      <footprint>FemaleHeaders:PinHeader_1x10_P2.54mm_Vertical_Female</footprint>
+      <fields>
+        <field name="Part Number">RS1-10-G</field>
+      </fields>
       <libsource lib="Connector_Generic" part="Conn_01x10" description="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Part Number" value="RS1-10-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
@@ -721,13 +792,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -740,13 +811,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -756,7 +827,7 @@
     </comp>
     <comp ref="R6">
       <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
@@ -767,7 +838,7 @@
     </comp>
     <comp ref="R11">
       <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
@@ -778,7 +849,7 @@
     </comp>
     <comp ref="R34">
       <value>DNP</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -793,7 +864,7 @@
     </comp>
     <comp ref="R52">
       <value>10</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -808,7 +879,7 @@
     </comp>
     <comp ref="R53">
       <value>33</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -823,7 +894,7 @@
     </comp>
     <comp ref="R54">
       <value>220</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -838,7 +909,7 @@
     </comp>
     <comp ref="R55">
       <value>470</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -853,7 +924,7 @@
     </comp>
     <comp ref="R62">
       <value>0</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
@@ -928,41 +999,59 @@
       <tstamps>58097112-12aa-4017-9203-b81040480966</tstamps>
     </comp>
     <comp ref="C23">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/Condensor Microphone/" tstamps="/33b46824-2cf1-41f4-ab61-a56b9cf41949/"/>
-      <tstamps>29895d40-8b6c-4148-949b-05544db14e53</tstamps>
+      <tstamps>60745424-ce09-42f9-8546-17f6641cca22</tstamps>
     </comp>
     <comp ref="C25">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/Condensor Microphone/" tstamps="/33b46824-2cf1-41f4-ab61-a56b9cf41949/"/>
-      <tstamps>d73c4535-27d4-4d55-9892-4a485cdb79b6</tstamps>
+      <tstamps>9a03219f-a83b-42d1-86e1-246b8eb633b1</tstamps>
     </comp>
     <comp ref="C26">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
       <property name="ki_keywords" value="cap capacitor"/>
       <sheetpath names="/Condensor Microphone/" tstamps="/33b46824-2cf1-41f4-ab61-a56b9cf41949/"/>
-      <tstamps>46acaac4-e45b-4bdc-895d-3ceaaff311cd</tstamps>
+      <tstamps>48f34ce7-8f49-4545-9f73-2010d1a9a029</tstamps>
     </comp>
     <comp ref="C27">
       <value>100pF COG</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
         <field name="MnfNumber">HGC0402G0101J500NTEJ</field>
       </fields>
@@ -979,12 +1068,12 @@
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
-        <field name="MnfNumber">FCC0603B105K250CT</field>
-        <field name="Package">0603</field>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Package" value="0603"/>
-      <property name="MnfNumber" value="FCC0603B105K250CT"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -997,13 +1086,13 @@
       <footprint>1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale</footprint>
       <fields>
         <field name="Manufacturer">TAD</field>
-        <field name="Part Number">1-0201FBV0T</field>
+        <field name="Part Number">RS1-02-G</field>
         <field name="Specifications">Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin</field>
       </fields>
       <libsource lib="4ms_Connector" part="Conn_01x02" description="HEADER 1x2 MALE PINS 0.100” 180deg"/>
       <property name="Specifications" value="Pins_01x02, Header, Male Pins, 1*2, spacing 2.54mm, straight pin"/>
       <property name="Manufacturer" value="TAD"/>
-      <property name="Part Number" value="1-0201FBV0T"/>
+      <property name="Part Number" value="RS1-02-G"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="HEADER 1x2 MALE PINS 0.100” 180deg"/>
@@ -1013,12 +1102,8 @@
     </comp>
     <comp ref="R12">
       <value>2.2k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <fields>
-        <field name="Specks">0402</field>
-      </fields>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
-      <property name="Specks" value="0402"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Resistor, US symbol"/>
@@ -1028,12 +1113,8 @@
     </comp>
     <comp ref="R13">
       <value>2.2k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <fields>
-        <field name="Specks">0402</field>
-      </fields>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
-      <property name="Specks" value="0402"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Resistor, US symbol"/>
@@ -1043,12 +1124,8 @@
     </comp>
     <comp ref="R15">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <fields>
-        <field name="Specks">0402</field>
-      </fields>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
-      <property name="Specks" value="0402"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Resistor, US symbol"/>
@@ -1058,12 +1135,8 @@
     </comp>
     <comp ref="R16">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <fields>
-        <field name="Specks">0402</field>
-      </fields>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
-      <property name="Specks" value="0402"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Resistor, US symbol"/>
@@ -1073,12 +1146,8 @@
     </comp>
     <comp ref="R17">
       <value>100k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <fields>
-        <field name="Specks">0402</field>
-      </fields>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
-      <property name="Specks" value="0402"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Resistor, US symbol"/>
@@ -1088,12 +1157,8 @@
     </comp>
     <comp ref="R20">
       <value>10k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
-      <fields>
-        <field name="Specks">0402</field>
-      </fields>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
-      <property name="Specks" value="0402"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Resistor, US symbol"/>
@@ -1139,10 +1204,12 @@
       <value>10U</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Specs">0805</field>
+        <field name="Type">X5R</field>
+        <field name="Voltage">16V</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Specs" value="0805"/>
+      <property name="Voltage" value="16V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Audio In"/>
       <property name="Sheetfile" value="AudioInSum.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -1154,10 +1221,12 @@
       <value>10U</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Specs">0805</field>
+        <field name="Type">X5R</field>
+        <field name="Voltage">16V</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Specs" value="0805"/>
+      <property name="Voltage" value="16V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Audio In"/>
       <property name="Sheetfile" value="AudioInSum.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -1166,9 +1235,15 @@
       <tstamps>9bdce722-3eb6-40ca-80b6-03a8c2c2e588</tstamps>
     </comp>
     <comp ref="C14">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Audio In"/>
       <property name="Sheetfile" value="AudioInSum.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -1178,7 +1253,7 @@
     </comp>
     <comp ref="R5">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio In"/>
       <property name="Sheetfile" value="AudioInSum.kicad_sch"/>
@@ -1189,7 +1264,7 @@
     </comp>
     <comp ref="R21">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio In"/>
       <property name="Sheetfile" value="AudioInSum.kicad_sch"/>
@@ -1200,7 +1275,7 @@
     </comp>
     <comp ref="R22">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio In"/>
       <property name="Sheetfile" value="AudioInSum.kicad_sch"/>
@@ -1211,7 +1286,7 @@
     </comp>
     <comp ref="R23">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio In"/>
       <property name="Sheetfile" value="AudioInSum.kicad_sch"/>
@@ -1222,7 +1297,7 @@
     </comp>
     <comp ref="R26">
       <value>DNP</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -1237,7 +1312,7 @@
     </comp>
     <comp ref="R27">
       <value>DNP</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -1252,7 +1327,7 @@
     </comp>
     <comp ref="R30">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio In"/>
       <property name="Sheetfile" value="AudioInSum.kicad_sch"/>
@@ -1263,7 +1338,7 @@
     </comp>
     <comp ref="R31">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio In"/>
       <property name="Sheetfile" value="AudioInSum.kicad_sch"/>
@@ -1274,7 +1349,7 @@
     </comp>
     <comp ref="R32">
       <value>4.7k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -1289,7 +1364,7 @@
     </comp>
     <comp ref="R33">
       <value>4.7k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -1304,7 +1379,7 @@
     </comp>
     <comp ref="R56">
       <value>0</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -1319,7 +1394,7 @@
     </comp>
     <comp ref="R59">
       <value>0</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -1334,7 +1409,7 @@
     </comp>
     <comp ref="R60">
       <value>DNP</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -1349,7 +1424,7 @@
     </comp>
     <comp ref="R61">
       <value>DNP</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -1381,10 +1456,12 @@
       <value>10U</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Specs">0805</field>
+        <field name="Type">X5R</field>
+        <field name="Voltage">16V</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Specs" value="0805"/>
+      <property name="Voltage" value="16V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -1396,10 +1473,12 @@
       <value>10U</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <fields>
-        <field name="Specs">0805</field>
+        <field name="Type">X5R</field>
+        <field name="Voltage">16V</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
-      <property name="Specs" value="0805"/>
+      <property name="Voltage" value="16V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -1410,7 +1489,13 @@
     <comp ref="C11">
       <value>10U</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">16V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="16V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -1421,7 +1506,13 @@
     <comp ref="C17">
       <value>10U</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">16V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="16V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -1430,9 +1521,15 @@
       <tstamps>6f4f849b-b140-4a62-805b-35c0553ae204</tstamps>
     </comp>
     <comp ref="C24">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -1442,7 +1539,7 @@
     </comp>
     <comp ref="C70">
       <value>DNP</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1453,7 +1550,7 @@
     </comp>
     <comp ref="C71">
       <value>DNP</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1464,7 +1561,7 @@
     </comp>
     <comp ref="R7">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1475,7 +1572,7 @@
     </comp>
     <comp ref="R8">
       <value>0</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1486,7 +1583,7 @@
     </comp>
     <comp ref="R9">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1497,7 +1594,7 @@
     </comp>
     <comp ref="R10">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1508,7 +1605,7 @@
     </comp>
     <comp ref="R18">
       <value>100</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1519,7 +1616,7 @@
     </comp>
     <comp ref="R19">
       <value>100</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1530,7 +1627,7 @@
     </comp>
     <comp ref="R24">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1541,7 +1638,7 @@
     </comp>
     <comp ref="R25">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1552,7 +1649,7 @@
     </comp>
     <comp ref="R28">
       <value>DNP</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -1567,7 +1664,7 @@
     </comp>
     <comp ref="R29">
       <value>DNP</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <fields>
         <field name="Specks">0402</field>
       </fields>
@@ -1582,7 +1679,7 @@
     </comp>
     <comp ref="R66">
       <value>0</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1593,7 +1690,7 @@
     </comp>
     <comp ref="R67">
       <value>1M</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
@@ -1613,12 +1710,18 @@
       <property name="Sheetname" value="Audio Out"/>
       <property name="Sheetfile" value="Audio Out.kicad_sch"/>
       <sheetpath names="/Audio Out/" tstamps="/d5f93f74-350a-43ef-bdfb-299723239788/"/>
-      <tstamps>4f34f533-6fe1-4cc8-a253-5e01f94a7ddd 54044d6c-743f-4ec5-a9fb-77caa531abc0 10455267-3275-4e69-b5d4-8bd0ec31c178</tstamps>
+      <tstamps>54044d6c-743f-4ec5-a9fb-77caa531abc0 4f34f533-6fe1-4cc8-a253-5e01f94a7ddd 10455267-3275-4e69-b5d4-8bd0ec31c178</tstamps>
     </comp>
     <comp ref="C1">
-      <value>0.1uF 0402</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <value>0.1uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <fields>
+        <field name="Type">X5R</field>
+        <field name="Voltage">6V</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="X5R"/>
       <property name="Sheetname" value="microSD"/>
       <property name="Sheetfile" value="microSD.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
@@ -1627,23 +1730,20 @@
       <tstamps>20bd16d9-1b1b-4ed0-9921-d2e47723c30d</tstamps>
     </comp>
     <comp ref="J4">
-      <value>5027740891</value>
-      <footprint>microSD2:CONN9_0185-02_GSW</footprint>
-      <datasheet>5027740891</datasheet>
-      <fields>
-        <field name="MnfNumber">5027740891</field>
-      </fields>
-      <libsource lib="microSD" part="5027740891" description=""/>
-      <property name="MnfNumber" value="5027740891"/>
+      <value>Micro_SD_Card</value>
+      <footprint>microSDVertical:CONN_PJS008U-3000-0_YAM</footprint>
+      <datasheet>http://katalog.we-online.de/em/datasheet/693072010801.pdf</datasheet>
+      <libsource lib="microSdVertical" part="Micro_SD_Card_Vertical" description="Micro SD Card Socket"/>
       <property name="Sheetname" value="microSD"/>
       <property name="Sheetfile" value="microSD.kicad_sch"/>
-      <property name="ki_keywords" value="5027740891"/>
+      <property name="ki_description" value="Micro SD Card Socket"/>
+      <property name="ki_keywords" value="connector SD microsd"/>
       <sheetpath names="/microSD/" tstamps="/e07e79f0-bef5-432f-b85e-bb16f66114f9/"/>
-      <tstamps>5035698d-e44f-438d-b0a2-71bc68e4de08</tstamps>
+      <tstamps>7929c003-5a22-41e7-9557-8af8e29ff0a7</tstamps>
     </comp>
     <comp ref="R1">
       <value>47k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="microSD"/>
       <property name="Sheetfile" value="microSD.kicad_sch"/>
@@ -1654,7 +1754,7 @@
     </comp>
     <comp ref="R2">
       <value>47k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="microSD"/>
       <property name="Sheetfile" value="microSD.kicad_sch"/>
@@ -1665,7 +1765,7 @@
     </comp>
     <comp ref="R3">
       <value>47k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="microSD"/>
       <property name="Sheetfile" value="microSD.kicad_sch"/>
@@ -1676,7 +1776,7 @@
     </comp>
     <comp ref="R4">
       <value>47k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="microSD"/>
       <property name="Sheetfile" value="microSD.kicad_sch"/>
@@ -1687,7 +1787,7 @@
     </comp>
     <comp ref="R14">
       <value>47k</value>
-      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <footprint>Resistor_SMD:R_0603_1608Metric</footprint>
       <libsource lib="Device" part="R_US" description="Resistor, US symbol"/>
       <property name="Sheetname" value="microSD"/>
       <property name="Sheetfile" value="microSD.kicad_sch"/>
@@ -1973,22 +2073,6 @@
         <pin num="2" name="" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="Device" part="C_Small">
-      <description>Unpolarized capacitor, small symbol</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>C_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">C_Small</field>
-        <field name="Datasheet">~</field>
-      </fields>
-      <pins>
-        <pin num="1" name="" type="passive"/>
-        <pin num="2" name="" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="Device" part="D_Schottky_Small">
       <description>Schottky diode, small symbol</description>
       <docs>~</docs>
@@ -2038,6 +2122,7 @@
         <field name="Value">SS54</field>
         <field name="Footprint">Diode_SMD_AKL:D_SMC</field>
         <field name="Datasheet">https://www.laro.com.pl/pdf/ss56.pdf</field>
+        <field name="MnfNumber">SS54FSH</field>
       </fields>
       <pins>
         <pin num="1" name="K" type="passive"/>
@@ -2229,34 +2314,30 @@
         <pin num="6" name="VCC" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="microSD" part="5027740891">
-      <docs>5027740891</docs>
+    <libpart lib="microSdVertical" part="Micro_SD_Card_Vertical">
+      <description>Micro SD Card Socket</description>
+      <docs>http://katalog.we-online.de/em/datasheet/693072010801.pdf</docs>
       <footprints>
-        <fp>CONN_5027740891_MOL</fp>
+        <fp>microSD*</fp>
       </footprints>
       <fields>
-        <field name="Reference">J4</field>
-        <field name="Value">5027740891</field>
-        <field name="Footprint">microSD2:CONN9_0185-02_GSW</field>
-        <field name="Datasheet">5027740891</field>
-        <field name="MnfNumber">5027740891</field>
+        <field name="Reference">J</field>
+        <field name="Value">Micro_SD_Card</field>
+        <field name="Footprint">microSDVertical:CONN_PJS008U-3000-0_YAM</field>
+        <field name="Datasheet">http://katalog.we-online.de/em/datasheet/693072010801.pdf</field>
       </fields>
       <pins>
-        <pin num="1" name="DAT2" type="unspecified"/>
-        <pin num="2" name="CD/DAT3" type="unspecified"/>
-        <pin num="3" name="CMD" type="unspecified"/>
-        <pin num="4" name="VDD" type="unspecified"/>
-        <pin num="5" name="CLK" type="unspecified"/>
-        <pin num="6" name="VSS" type="unspecified"/>
-        <pin num="7" name="DAT0" type="unspecified"/>
-        <pin num="8" name="DAT1" type="unspecified"/>
-        <pin num="9" name="9" type="unspecified"/>
-        <pin num="10" name="10" type="unspecified"/>
-        <pin num="11" name="11" type="unspecified"/>
-        <pin num="12" name="12" type="unspecified"/>
-        <pin num="13" name="13" type="unspecified"/>
-        <pin num="14" name="14" type="unspecified"/>
-        <pin num="15" name="15" type="unspecified"/>
+        <pin num="1" name="DAT2" type="bidirectional"/>
+        <pin num="2" name="DAT3/CD" type="bidirectional"/>
+        <pin num="3" name="CMD" type="input"/>
+        <pin num="4" name="VDD" type="power_in"/>
+        <pin num="5" name="CLK" type="input"/>
+        <pin num="6" name="VSS" type="power_in"/>
+        <pin num="7" name="DAT0" type="bidirectional"/>
+        <pin num="8" name="DAT1" type="bidirectional"/>
+        <pin num="9" name="SUPPORT" type="passive"/>
+        <pin num="10" name="SUPPORT" type="passive"/>
+        <pin num="11" name="SUPPORT" type="passive"/>
       </pins>
     </libpart>
   </libparts>
@@ -2300,8 +2381,8 @@
     <library logical="dk_Optoisolators-Logic-Output">
       <uri>C:/Git/digikey-kicad-library/digikey-symbols/dk_Optoisolators-Logic-Output.lib</uri>
     </library>
-    <library logical="microSD">
-      <uri>C:\Git\DaisySeedBreakout/SymbolsAndFootprints/2023-09-17_17-59-29.kicad_sym</uri>
+    <library logical="microSdVertical">
+      <uri>C:\Git\DaisySeedBreakout/SymbolsAndFootprints/microSD_vertical/microSdVertical.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
@@ -2315,7 +2396,6 @@
       <node ref="C22" pin="1" pintype="passive"/>
       <node ref="C3" pin="1" pintype="passive"/>
       <node ref="C6" pin="1" pintype="passive"/>
-      <node ref="C7" pin="1" pintype="passive"/>
       <node ref="C8" pin="1" pintype="passive"/>
       <node ref="J10" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="J14" pin="3" pinfunction="Pin_3" pintype="passive"/>
@@ -2335,7 +2415,7 @@
       <node ref="J25" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J26" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J26" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="J4" pin="4" pinfunction="VDD" pintype="unspecified"/>
+      <node ref="J4" pin="4" pinfunction="VDD" pintype="power_in"/>
       <node ref="J7" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="R1" pin="1" pintype="passive"/>
       <node ref="R11" pin="1" pintype="passive"/>
@@ -2645,31 +2725,31 @@
     </net>
     <net code="57" name="/SD_CLK">
       <node ref="A1" pin="7" pinfunction="SD_CLK" pintype="bidirectional"/>
-      <node ref="J4" pin="5" pinfunction="CLK" pintype="unspecified"/>
+      <node ref="J4" pin="5" pinfunction="CLK" pintype="input"/>
     </net>
     <net code="58" name="/SD_CMD">
       <node ref="A1" pin="6" pinfunction="SD_CMD" pintype="bidirectional"/>
-      <node ref="J4" pin="3" pinfunction="CMD" pintype="unspecified"/>
+      <node ref="J4" pin="3" pinfunction="CMD" pintype="input"/>
       <node ref="R3" pin="2" pintype="passive"/>
     </net>
     <net code="59" name="/SD_D0">
       <node ref="A1" pin="5" pinfunction="SD_DATA_0" pintype="bidirectional"/>
-      <node ref="J4" pin="7" pinfunction="DAT0" pintype="unspecified"/>
+      <node ref="J4" pin="7" pinfunction="DAT0" pintype="bidirectional"/>
       <node ref="R2" pin="2" pintype="passive"/>
     </net>
     <net code="60" name="/SD_D1">
       <node ref="A1" pin="4" pinfunction="SD_DATA_1" pintype="bidirectional"/>
-      <node ref="J4" pin="8" pinfunction="DAT1" pintype="unspecified"/>
+      <node ref="J4" pin="8" pinfunction="DAT1" pintype="bidirectional"/>
       <node ref="R1" pin="2" pintype="passive"/>
     </net>
     <net code="61" name="/SD_D2">
       <node ref="A1" pin="3" pinfunction="SD_DATA_2" pintype="bidirectional"/>
-      <node ref="J4" pin="1" pinfunction="DAT2" pintype="unspecified"/>
+      <node ref="J4" pin="1" pinfunction="DAT2" pintype="bidirectional"/>
       <node ref="R14" pin="2" pintype="passive"/>
     </net>
     <net code="62" name="/SD_D3">
       <node ref="A1" pin="2" pinfunction="SD_DATA_3" pintype="bidirectional"/>
-      <node ref="J4" pin="2" pinfunction="CD/DAT3" pintype="unspecified"/>
+      <node ref="J4" pin="2" pinfunction="DAT3/CD" pintype="bidirectional"/>
       <node ref="R4" pin="2" pintype="passive"/>
     </net>
     <net code="63" name="/USB_5V">
@@ -2708,7 +2788,6 @@
       <node ref="C28" pin="1" pintype="passive"/>
       <node ref="C3" pin="2" pintype="passive"/>
       <node ref="C6" pin="2" pintype="passive"/>
-      <node ref="C7" pin="2" pintype="passive"/>
       <node ref="C70" pin="2" pintype="passive"/>
       <node ref="C71" pin="2" pintype="passive"/>
       <node ref="C8" pin="2" pintype="passive"/>
@@ -2748,12 +2827,7 @@
       <node ref="J23" pin="7" pinfunction="7" pintype="passive"/>
       <node ref="J23" pin="9" pinfunction="9" pintype="passive"/>
       <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J4" pin="12" pinfunction="12" pintype="unspecified"/>
-      <node ref="J4" pin="13" pinfunction="13" pintype="unspecified"/>
-      <node ref="J4" pin="14" pinfunction="14" pintype="unspecified"/>
-      <node ref="J4" pin="15" pinfunction="15" pintype="unspecified"/>
-      <node ref="J4" pin="6" pinfunction="VSS" pintype="unspecified"/>
-      <node ref="J4" pin="9" pinfunction="9" pintype="unspecified"/>
+      <node ref="J4" pin="6" pinfunction="VSS" pintype="power_in"/>
       <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="J7" pin="2" pinfunction="Pin_2" pintype="passive"/>
@@ -2800,28 +2874,31 @@
       <node ref="R34" pin="2" pintype="passive"/>
       <node ref="U4" pin="3" pinfunction="SA0/SDO" pintype="bidirectional"/>
     </net>
-    <net code="72" name="unconnected-(J4-Pad10)">
-      <node ref="J4" pin="10" pinfunction="10" pintype="unspecified+no_connect"/>
+    <net code="72" name="unconnected-(J4-SUPPORT-Pad9)">
+      <node ref="J4" pin="9" pinfunction="SUPPORT" pintype="passive+no_connect"/>
     </net>
-    <net code="73" name="unconnected-(J4-Pad11)">
-      <node ref="J4" pin="11" pinfunction="11" pintype="unspecified+no_connect"/>
+    <net code="73" name="unconnected-(J4-SUPPORT-Pad10)">
+      <node ref="J4" pin="10" pinfunction="SUPPORT" pintype="passive+no_connect"/>
     </net>
-    <net code="74" name="unconnected-(J15-D+-Pad3)">
+    <net code="74" name="unconnected-(J4-SUPPORT-Pad11)">
+      <node ref="J4" pin="11" pinfunction="SUPPORT" pintype="passive+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(J15-D+-Pad3)">
       <node ref="J15" pin="3" pinfunction="D+" pintype="bidirectional"/>
     </net>
-    <net code="75" name="unconnected-(J15-D--Pad2)">
+    <net code="76" name="unconnected-(J15-D--Pad2)">
       <node ref="J15" pin="2" pinfunction="D-" pintype="bidirectional"/>
     </net>
-    <net code="76" name="unconnected-(J15-ID-Pad4)">
+    <net code="77" name="unconnected-(J15-ID-Pad4)">
       <node ref="J15" pin="4" pinfunction="ID" pintype="passive"/>
     </net>
-    <net code="77" name="unconnected-(U1-NC-Pad3)">
+    <net code="78" name="unconnected-(U1-NC-Pad3)">
       <node ref="U1" pin="3" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="78" name="unconnected-(U4-INT1-Pad12)">
+    <net code="79" name="unconnected-(U4-INT1-Pad12)">
       <node ref="U4" pin="12" pinfunction="INT1" pintype="output+no_connect"/>
     </net>
-    <net code="79" name="unconnected-(U4-INT2-Pad11)">
+    <net code="80" name="unconnected-(U4-INT2-Pad11)">
       <node ref="U4" pin="11" pinfunction="INT2" pintype="output+no_connect"/>
     </net>
   </nets>

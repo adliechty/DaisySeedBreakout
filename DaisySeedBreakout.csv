@@ -1,40 +1,40 @@
-Comment,Designator,Footprint,LCSC Part #
-Electrosmith_Daisy_Seed_Rev4 Daisy is an embedded platform for music.,A1,Electrosmith_Daisy_Seed,
-0.1uF 0402 Unpolarized capacitor,"C1,C2,C3,C6,C7,C8,C9,C10,C14,C15,C16,C18,C22,C23,C24,C25,C26",C_0402_1005Metric,
-10U Unpolarized capacitor,"C4,C5,C11,C12,C13,C17",C_0805_2012Metric,
-100uF Unpolarized capacitor,C19,C_1210_3225Metric,
-DNP_100uF Unpolarized capacitor,"C20,C21",C_1210_3225Metric,
-100pF COG Unpolarized capacitor,C27,C_0402_1005Metric,
-1uF Unpolarized capacitor,C28,C_0603_1608Metric,
-DNP Unpolarized capacitor,"C70,C71",C_0402_1005Metric,
-"D_Schottky Schottky diode, small symbol",D1,D_SOD-323,
-"SS54 SMC Schottky diode, 40V, 5A, Alternate KiCAD Library","D2,D3",D_SMA,
-MountingHole Mounting Hole without connection,"H1,H2,H3,H4",MountingHole_3.2mm_M3_DIN965_Pad,
-Conn_01x03 HEADER 1x3 MALE PINS 0.100” 180deg,"J1,J3,J10,J14",PinHeader_1x03_P2.54mm_Vertical_Female,
-Conn_01x02 HEADER 1x2 MALE PINS 0.100” 180deg,"J2,J6,J8,J9,J11,J12,J13,J16,J17,J25,J26",PinHeader_1x02_P2.54mm_VerticalFemale,
-5027740891 ,J4,CONN9_0185-02_GSW,
-"Conn_01x04 Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)","J5,J7,J20",PinHeader_1x04_P2.54mm_Vertical_Female,
-USB_B_Micro USB Micro Type B connector,J15,USB_Micro-B_Molex-105017-0001,
-Conn_02x04 HEADER 2x4 MALE PINS 0.100” 180deg,"J18,J21",PinHeader_2x04_P2.54mm_Vertical_Female,
-"Conn_01x06 Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)",J19,PinHeader_1x06_P2.54mm_Vertical_Female,
-"Pins_02x10_P2.54mm_TH Header 2x10 Pins, Pitch=1.27mm, Pin Height=3mm, Vertical, TH",J23,PinHeader_2x10_P2.54mm_Vertical,
-"Conn_01x10 Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)",J24,PinHeader_1x10_P2.54mm_Vertical,
-"47k Resistor, US symbol","R1,R2,R3,R4,R14",R_0402_1005Metric,
-"1M Resistor, US symbol","R5,R7,R9,R10,R15,R16,R21,R22,R23,R24,R25,R30,R31,R67",R_0402_1005Metric,
-"10k Resistor, US symbol","R6,R11,R20",R_0402_1005Metric,
-"0 Resistor, US symbol","R8,R56,R59,R62,R66",R_0402_1005Metric,
-"2.2k Resistor, US symbol","R12,R13",R_0402_1005Metric,
-"100k Resistor, US symbol",R17,R_0402_1005Metric,
-"100 Resistor, US symbol","R18,R19",R_0402_1005Metric,
-"DNP Resistor, US symbol","R26,R27,R28,R29,R34,R60,R61",R_0402_1005Metric,
-"4.7k Resistor, US symbol","R32,R33",R_0402_1005Metric,
-"10 Resistor, US symbol",R52,R_0402_1005Metric,
-"33 Resistor, US symbol",R53,R_0402_1005Metric,
-"220 Resistor, US symbol",R54,R_0402_1005Metric,
-"470 Resistor, US symbol",R55,R_0402_1005Metric,
-H11L1M OPTOISO 4.17KV OPN COLL 6DIP,U1,DIP-6_W7.62mm,
-MAX4466EXK_T IC PREAMP AUDIO MONO AB SC70-5,U2,SOT-353,
-~ ,U3,D8_TEX,
-"LIS2DE12 3-Axis Accelerometer, 2/4/8/16g range, I2C/SPI interface",U4,LGA-12_2x2mm_P0.5mm,
-TLV9062IDR ,U7,D0008A_N,
-TPD2EUSB30ADRTR ,U10,DRT3,
+"#","Reference","Qty","Value","Footprint","Voltage","Type"
+"1","A1","1","Electrosmith_Daisy_Seed_Rev4","DaisySeedThroughHold:Electrosmith_Daisy_Seed","",""
+"2","C1, C2, C3, C6, C8, C9, C10, C14, C15, C16, C18, C22, C23, C24, C25, C26","16","0.1uF","Capacitor_SMD:C_0603_1608Metric","6V","X5R"
+"3","C4, C5, C11, C12, C13, C17","6","10U","Capacitor_SMD:C_0805_2012Metric","16V","X5R"
+"4","C19","1","100uF","Capacitor_SMD:C_1210_3225Metric","6V","X5R"
+"5","C20, C21","2","DNP_100uF","Capacitor_SMD:C_1210_3225Metric","6V","X5R"
+"6","C27","1","100pF COG","Capacitor_SMD:C_0603_1608Metric","",""
+"7","C28","1","1uF","Capacitor_SMD:C_0603_1608Metric","6V","X5R"
+"8","C70, C71","2","DNP","Capacitor_SMD:C_0603_1608Metric","",""
+"9","D1","1","D_Schottky","Diode_SMD:D_SOD-323","",""
+"10","D2, D3","2","SS54","Diode_SMD_AKL:D_SMC","",""
+"11","H1, H2, H3, H4","4","MountingHole","MountingHole:MountingHole_3.2mm_M3_DIN965_Pad","",""
+"12","J1, J3, J10, J14","4","Conn_01x03","FemaleHeaders:PinHeader_1x03_P2.54mm_Vertical_Female","",""
+"13","J2, J6, J8, J9, J11, J12, J13, J16, J17, J25, J26","11","Conn_01x02","1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale","",""
+"14","J4","1","Micro_SD_Card","microSDVertical:CONN_PJS008U-3000-0_YAM","",""
+"15","J5, J7, J20","3","Conn_01x04","FemaleHeaders:PinHeader_1x04_P2.54mm_Vertical_Female","",""
+"16","J15","1","USB_B_Micro","Connector_USB:USB_Micro-B_Molex-105017-0001","",""
+"17","J18, J21","2","Conn_02x04","FemaleHeaders:PinHeader_2x04_P2.54mm_Vertical_Female","",""
+"18","J19","1","Conn_01x06","Ultralibrarian:PinHeader_1x06_P2.54mm_Vertical_Female","",""
+"19","J23","1","Pins_02x10_P2.54mm_TH","2x10FemaleHeader:PinHeader_2x10_P2.54mm_Vertical","",""
+"20","J24","1","Conn_01x10","FemaleHeaders:PinHeader_1x10_P2.54mm_Vertical_Female","",""
+"21","R1, R2, R3, R4, R14","5","47k","Resistor_SMD:R_0603_1608Metric","",""
+"22","R5, R7, R9, R10, R15, R16, R21, R22, R23, R24, R25, R30, R31, R67","14","1M","Resistor_SMD:R_0603_1608Metric","",""
+"23","R6, R11, R20","3","10k","Resistor_SMD:R_0603_1608Metric","",""
+"24","R8, R56, R59, R62, R66","5","0","Resistor_SMD:R_0603_1608Metric","",""
+"25","R12, R13","2","2.2k","Resistor_SMD:R_0603_1608Metric","",""
+"26","R17","1","100k","Resistor_SMD:R_0603_1608Metric","",""
+"27","R18, R19","2","100","Resistor_SMD:R_0603_1608Metric","",""
+"28","R26, R27, R28, R29, R34, R60, R61","7","DNP","Resistor_SMD:R_0603_1608Metric","",""
+"29","R32, R33","2","4.7k","Resistor_SMD:R_0603_1608Metric","",""
+"30","R52","1","10","Resistor_SMD:R_0603_1608Metric","",""
+"31","R53","1","33","Resistor_SMD:R_0603_1608Metric","",""
+"32","R54","1","220","Resistor_SMD:R_0603_1608Metric","",""
+"33","R55","1","470","Resistor_SMD:R_0603_1608Metric","",""
+"34","U1","1","H11L1M","digikey-footprints:DIP-6_W7.62mm","",""
+"35","U2","1","MAX4466EXK_T","digikey-footprints:SOT-353","",""
+"36","U3","1","~","Ultralibrarian:D8_TEX","",""
+"37","U4","1","LIS2DE12","Package_LGA:LGA-12_2x2mm_P0.5mm","",""
+"38","U7","1","TLV9062IDR","D0008A_N","",""
+"39","U10","1","TPD2EUSB30ADRTR","DRT3","",""

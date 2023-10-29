@@ -1,27 +1,30 @@
-Comment,Designator,Footprint,LCSC Part #
-0.1uF 0402 Unpolarized capacitor,"C1,C2,C3,C6,C7,C8,C9,C10,C14,C15,C16,C18,C22,C23,C24,C25,C26",C_0402_1005Metric,C1525
-10U Unpolarized capacitor,"C4,C5,C11,C12,C13,C17",C_0805_2012Metric,C15850
-100uF Unpolarized capacitor,C19,C_1210_3225Metric,C15008
-100pF COG Unpolarized capacitor,C27,C_0402_1005Metric,C1546
-1uF Unpolarized capacitor,C28,C_0603_1608Metric,C15849
-"D_Schottky Schottky diode, small symbol",D1,D_SOD-323,C191023
-"SS54 SMC Schottky diode, 40V, 5A, Alternate KiCAD Library","D2,D3",D_SMA,C22452
-5027740891 ,J4,CONN9_0185-02_GSW,C5155564
-USB_B_Micro USB Micro Type B connector,J15,USB_Micro-B_Molex-105017-0001,C136000
-"47k Resistor, US symbol","R1,R2,R3,R4,R14",R_0402_1005Metric,C25792
-"1M Resistor, US symbol","R5,R7,R9,R10,R15,R16,R21,R22,R23,R24,R25,R30,R31,R67",R_0402_1005Metric,C26083
-"10k Resistor, US symbol","R6,R11,R20",R_0402_1005Metric,C25744
-"0 Resistor, US symbol","R8,R56,R59,R62,R66",R_0402_1005Metric,C17168
-"2.2k Resistor, US symbol","R12,R13",R_0402_1005Metric,C25879
-"100k Resistor, US symbol",R17,R_0402_1005Metric,C25741
-"100 Resistor, US symbol","R18,R19",R_0402_1005Metric,C25076
-"4.7k Resistor, US symbol","R32,R33",R_0402_1005Metric,C25900
-"10 Resistor, US symbol",R52,R_0402_1005Metric,C25077
-"33 Resistor, US symbol",R53,R_0402_1005Metric,C25105
-"220 Resistor, US symbol",R54,R_0402_1005Metric,C25091
-"470 Resistor, US symbol",R55,R_0402_1005Metric,C25117
-MAX4466EXK_T IC PREAMP AUDIO MONO AB SC70-5,U2,SOT-353,C7456762
-~ ,U3,D8_TEX,C206212
-"LIS2DE12 3-Axis Accelerometer, 2/4/8/16g range, I2C/SPI interface",U4,LGA-12_2x2mm_P0.5mm,C155639
-TLV9062IDR ,U7,D0008A_N,C398355
-TPD2EUSB30ADRTR ,U10,DRT3,C2997271
+Comment,Designator,Footprint,Unnamed: 3,Unnamed: 4,Unnamed: 5,LCSC Part #
+0.1uF 0402 Unpolarized capacitor,"C1,C2,C3,C6,C8,C9,C10,C14,C15,C16,C18,C22,C23,C24,C25,C26",C_0603_1608Metric,,,,
+10U Unpolarized capacitor,"C4,C5,C11,C12,C13,C17",C_0805_2012Metric,,,,C15850
+100uF Unpolarized capacitor,C19,C_1210_3225Metric,,,,C15008
+100pF COG Unpolarized capacitor,C27,C_0603_1608Metric,,,,
+1uF Unpolarized capacitor,C28,C_0603_1608Metric,,,,C15849
+DNP Unpolarized capacitor,"C70,C71",C_0603_1608Metric,,,,
+"D_Schottky Schottky diode, small symbol",D1,D_SOD-323,,,,C191023
+"SS54 SMC Schottky diode, 40V, 5A, Alternate KiCAD Library","D2,D3",D_SMA,,,,C22452
+Micro_SD_Card Micro SD Card Socket,J4,CONN_PJS008U-3000-0_YAM,,,,
+USB_B_Micro USB Micro Type B connector,J15,USB_Micro-B_Molex-105017-0001,,,,C136000
+"Conn_01x10 Generic connector, single row, 01x10, script generated (kicad-library-utils/schlib/autogen/connector/)",J24,PinHeader_1x10_P2.54mm_Vertical_Female,,,,
+"47k Resistor, US symbol","R1,R2,R3,R4,R14",R_0603_1608Metric,,,,
+"1M Resistor, US symbol","R5,R7,R9,R10,R15,R16,R21,R22,R23,R24,R25,R30,R31,R67",R_0603_1608Metric,,,,
+"10k Resistor, US symbol","R6,R11,R20",R_0603_1608Metric,,,,
+"0 Resistor, US symbol","R8,R56,R59,R62,R66",R_0603_1608Metric,,,,
+"2.2k Resistor, US symbol","R12,R13",R_0603_1608Metric,,,,
+"100k Resistor, US symbol",R17,R_0603_1608Metric,,,,
+"100 Resistor, US symbol","R18,R19",R_0603_1608Metric,,,,
+"DNP Resistor, US symbol","R26,R27,R28,R29,R34,R60,R61",R_0603_1608Metric,,,,
+"4.7k Resistor, US symbol","R32,R33",R_0603_1608Metric,,,,
+"10 Resistor, US symbol",R52,R_0603_1608Metric,,,,
+"33 Resistor, US symbol",R53,R_0603_1608Metric,,,,
+"220 Resistor, US symbol",R54,R_0603_1608Metric,,,,
+"470 Resistor, US symbol",R55,R_0603_1608Metric,,,,
+MAX4466EXK_T IC PREAMP AUDIO MONO AB SC70-5,U2,SOT-353,,,,C7456762
+~ ,U3,D8_TEX,,,,C206212
+"LIS2DE12 3-Axis Accelerometer, 2/4/8/16g range, I2C/SPI interface",U4,LGA-12_2x2mm_P0.5mm,,,,C155639
+TLV9062IDR ,U7,D0008A_N,,,,C398355
+TPD2EUSB30ADRTR ,U10,DRT3,,,,C2997271
