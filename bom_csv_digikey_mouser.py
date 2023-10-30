@@ -20,17 +20,22 @@
 
 import sys
 sys.path.append("C:\\Program Files\\KiCad\\7.0\\bin\\scripting\\plugins")
+sys.path.append("C:/Git/mouser-api")
+sys.path.append("C:/Git/mouser-api/mouser")
+from mouser.api import MouserPartSearchRequest
 # Import the KiCad python helper module and the csv formatter
 import kicad_netlist_reader
 import kicad_utils
 import csv
 import pandas as pd
+import os
+import re
 
 # Get extra fields from the command line
 extra_fields = sys.argv[3:]
 
 comp_fields = ['Value', 'Footprint', 'Voltage', 'Type'] + extra_fields
-header_names = ['#', 'Reference', 'Qty'] + comp_fields + ["Mnf PN", "Mouser PN", "Digikey PN", "Mouser Price", "Digikey Price"]
+#header_names = ['#', 'Reference', 'Qty'] + comp_fields + ["Mnf PN", "Mouser PN", "Digikey PN", "Mouser Price", "Digikey Price"]
 
 def getComponentString(comp, field_name):
     if field_name == "Value":
@@ -62,20 +67,34 @@ def myEqu(self, other):
 
     return result
 
-def get_source_info(pn_df, c, comp_fields)
-    fields = {}
-    for field_name in comp_fields:
-        fields[field_name] = getComponentString( c, field_name )
-
+def add_purchase_info(pn_df, row):
+    # Filter pn data frame according to current row in BOM
     for field in comp_fields:
-        pn_df = pn_df[pn_df[field] == fields[field]]
+        if row[field] == "":
+            continue
+
+        pn_df = pn_df[pn_df[field] == row[field]]
+
     if len(pn_df) >= 1:
-        return pn_df.iloc[0]['Mnf PN'],
-               pn_df.iloc[0]['Mouser PN'],
-               pn_df.iloc[0]['Digikey PN'],
-               pn_df.iloc[0]['Mouser Price'],
-               pn_df.iloc[0]['Digikey Price']
-    return "", "", "", "", ""
+        row['Mnf PN']     = pn_df.iloc[0]['Mnf PN']
+        row['Mouser PN']  = pn_df.iloc[0]['Mouser PN']
+        row['Digikey PN'] = pn_df.iloc[0]['Digikey PN']
+
+        if str(row['Mouser PN']) not in ["nan", "", "DNP"]:
+            request = MouserPartSearchRequest('partnumber')
+            request.part_search(row['Mouser PN'])
+            part = request.get_clean_response()
+            row['Mouser Manufacturer'] = part['Manufacturer']
+            row['Mouser Description'] = part['Description']
+            price_breaks = ""
+            for price_break in part['PriceBreaks']:
+                price_breaks += f"{price_break['Quantity']}x:{price_break['Price']}; "
+            price_break = price_breaks[:-2]
+
+            row['Mouser PriceBreaks']  = price_breaks
+            row['Mouser Availability'] = part['Availability'].replace(" In Stock", "")
+
+    return row
 
 
 # Override the component equivalence operator - it is important to do this
@@ -87,30 +106,15 @@ kicad_netlist_reader.comp.__eq__ = myEqu
 # the command line option. If the file doesn't exist, execution will stop
 net = kicad_netlist_reader.netlist(sys.argv[1])
 
-# Open a file to write to, if the file cannot be opened output to stdout
-# instead
-try:
-    f = kicad_utils.open_file_writeUTF8(sys.argv[2], 'w')
-except IOError:
-    e = "Can't open output file for writing: " + sys.argv[2]
-    print(__file__, ":", e, sys.stderr)
-    f = sys.stdout
-
-# Create a new csv writer object to use as the output formatter
-out = csv.writer(f, lineterminator='\n', delimiter=',', quotechar='\"', quoting=csv.QUOTE_ALL)
-
-# Output a CSV header
-out.writerow(header_names)
+df = pd.DataFrame()
 
 # Get all of the components in groups of matching parts + values
 # (see kicad_netlist_reader.py)
 grouped = net.groupComponents()
-
-pn_df = pd.read_csv("PartNumbers.csv")
+pn_df = pd.read_csv(os.path.dirname(sys.argv[1]) + "/PartNumbers.csv")
 
 # Output all of the component information
-index = 1
-for group in grouped:
+for index, group in enumerate(grouped):
     refs = ""
 
     # Add the reference of every component in the group and keep a reference
@@ -123,22 +127,23 @@ for group in grouped:
     refs = refs[:-2]
 
     # Fill in the component groups common data
-    row = []
-    row.append( index )
-    row.append( refs )
-    row.append( len(group) )
+    row = {}
+    row['#'] = index + 1
+    row['Reference'] = refs
+    row['Qty'] = len(group)
 
     # Add the values of component-specific data
     for field_name in comp_fields:
-        row.append( getComponentString( c, field_name ) )
+        row[field_name] = getComponentString( c, field_name )
 
-    mnf_pn, mouser_pn, digikey_pn, mouser_price, digikey_price = get_source_info(pn_df, c, comp_fields)
-    row.append(mnf_pn)
-    row.append(mouser_pn)
-    row.append(digikey_pn)
-    row.append(mouser_price)
-    row.append(digikey_price)
+    row = add_purchase_info(pn_df, row)
 
-    out.writerow(row)
+    # concat row to end of final data frame
+    df_row =  pd.DataFrame([row])
+    df = pd.concat([df, df_row], ignore_index=True)
 
-    index += 1
+
+try:
+    df.to_csv(sys.argv[2], index=False)
+except:
+    print(f"{sys.argv[2]} Open, close it and re-run BOM tool")

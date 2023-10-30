@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Git\DaisySeedBreakout\DaisySeedBreakout.kicad_sch</source>
-    <date>10/28/2023 11:25:18 PM</date>
+    <date>10/29/2023 10:30:14 PM</date>
     <tool>Eeschema 7.0.7</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -352,9 +352,11 @@
       <datasheet>https://www.laro.com.pl/pdf/ss56.pdf</datasheet>
       <fields>
         <field name="MnfNumber">SS54FSH</field>
+        <field name="Type">5A:0.7V</field>
       </fields>
       <libsource lib="Diode_Schottky_AKL" part="SS54" description="SMC Schottky diode, 40V, 5A, Alternate KiCAD Library"/>
       <property name="MnfNumber" value="SS54FSH"/>
+      <property name="Type" value="5A:0.7V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="SMC Schottky diode, 40V, 5A, Alternate KiCAD Library"/>
@@ -368,9 +370,11 @@
       <datasheet>https://www.laro.com.pl/pdf/ss56.pdf</datasheet>
       <fields>
         <field name="MnfNumber">SS54FSH</field>
+        <field name="Type">5A:0.7V</field>
       </fields>
       <libsource lib="Diode_Schottky_AKL" part="SS54" description="SMC Schottky diode, 40V, 5A, Alternate KiCAD Library"/>
       <property name="MnfNumber" value="SS54FSH"/>
+      <property name="Type" value="5A:0.7V"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="DaisySeedBreakout.kicad_sch"/>
       <property name="ki_description" value="SMC Schottky diode, 40V, 5A, Alternate KiCAD Library"/>
@@ -379,7 +383,7 @@
       <tstamps>e0a1ac46-e3ed-48c6-9583-a8eae368364a</tstamps>
     </comp>
     <comp ref="H1">
-      <value>MountingHole</value>
+      <value>DNP</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
       <libsource lib="" part="MountingHole_1" description="Mounting Hole without connection"/>
       <property name="Sheetname" value=""/>
@@ -390,7 +394,7 @@
       <tstamps>312abb13-fa97-4b16-b503-a636eb82bfae</tstamps>
     </comp>
     <comp ref="H2">
-      <value>MountingHole</value>
+      <value>DNP</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
       <libsource lib="" part="MountingHole_2" description="Mounting Hole without connection"/>
       <property name="Sheetname" value=""/>
@@ -401,7 +405,7 @@
       <tstamps>4c9abeb6-a82d-4d08-9f77-6d2c876c0f7f</tstamps>
     </comp>
     <comp ref="H3">
-      <value>MountingHole</value>
+      <value>DNP</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
       <libsource lib="" part="MountingHole_3" description="Mounting Hole without connection"/>
       <property name="Sheetname" value=""/>
@@ -412,7 +416,7 @@
       <tstamps>9e43850a-fe48-47cd-a42f-8e789f7f87d3</tstamps>
     </comp>
     <comp ref="H4">
-      <value>MountingHole</value>
+      <value>DNP</value>
       <footprint>MountingHole:MountingHole_3.2mm_M3_DIN965_Pad</footprint>
       <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
       <property name="Sheetname" value=""/>
@@ -1050,13 +1054,17 @@
       <tstamps>48f34ce7-8f49-4545-9f73-2010d1a9a029</tstamps>
     </comp>
     <comp ref="C27">
-      <value>100pF COG</value>
+      <value>100pF</value>
       <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
         <field name="MnfNumber">HGC0402G0101J500NTEJ</field>
+        <field name="Type">COG</field>
+        <field name="Voltage">6V</field>
       </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="MnfNumber" value="HGC0402G0101J500NTEJ"/>
+      <property name="Voltage" value="6V"/>
+      <property name="Type" value="COG"/>
       <property name="Sheetname" value="Condensor Microphone"/>
       <property name="Sheetfile" value="Condensor Microphone.kicad_sch"/>
       <property name="ki_description" value="Unpolarized capacitor"/>
