@@ -94,6 +94,25 @@ def add_purchase_info(pn_df, row):
             row['Mouser PriceBreaks']  = price_breaks
             row['Mouser Availability'] = part['Availability'].replace(" In Stock", "")
 
+
+            for pcb_qty in [1, 10, 100, 1000]:
+                print(row['Mouser PN'])
+                if str(pn_df.iloc[0]['Mouser Parts Needed per Footrprint']) in ["", "nan"]:
+                    qty = row['Qty'] * pcb_qty
+                else:
+                    qty = row['Qty'] * pn_df.iloc[0]['Mouser Parts Needed per Footrprint'] * pcb_qty
+
+                for price_break in part['PriceBreaks'][::-1]:
+                    print(price_break)
+                    if qty >= price_break['Quantity']:
+                        price = float(price_break['Price'].replace("$", ""))
+                        break
+
+                row[f'Mouser {pcb_qty} PCB Part Price total']  = round(price * qty / pcb_qty, 2)
+
+            row[f'Mouser single PCB Part Qty'] = qty / 1000
+            
+
     return row
 
 
@@ -143,7 +162,23 @@ for index, group in enumerate(grouped):
     df = pd.concat([df, df_row], ignore_index=True)
 
 
+df_summary = pd.DataFrame()
+row = {}
+df_no_dnp = df[df['Mouser PN'] != "DNP"]
+
+for pcb_qty in [1, 10, 100, 1000]:
+    row['PCB Quantity'] = pcb_qty
+    row['Mouser Component Cost']       = df_no_dnp[f'Mouser {pcb_qty} PCB Part Price total'].sum()
+    row['Mouser Missing Part Numbers'] = df_no_dnp[f'Mouser {pcb_qty} PCB Part Price total'].isna().sum()
+    df_row = pd.DataFrame([row])
+    df_summary = pd.concat([df_summary, df_row], ignore_index=True)
+
 try:
     df.to_csv(sys.argv[2], index=False)
 except:
     print(f"{sys.argv[2]} Open, close it and re-run BOM tool")
+
+try:
+    df_summary.to_csv(os.path.dirname(sys.argv[2]) + "/BOM_Summary.csv", index=False)
+except:
+    print(f"{sys.dirname(os.path.argv[2]) + '/BOM_Summary.csv'} Open, close it and re-run BOM tool")
