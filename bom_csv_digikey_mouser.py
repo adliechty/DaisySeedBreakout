@@ -20,9 +20,14 @@
 
 import sys
 sys.path.append("C:\\Program Files\\KiCad\\7.0\\bin\\scripting\\plugins")
-sys.path.append("C:/Git/mouser-api")
-sys.path.append("C:/Git/mouser-api/mouser")
+#sys.path.append("C:/Git/mouser-api")
+#sys.path.append("C:/Git/mouser-api/mouser")
 from mouser.api import MouserPartSearchRequest
+
+import digikey
+from digikey.v3.productinformation import KeywordSearchRequest
+from digikey.v3.batchproductdetails import BatchProductDetailsRequest
+
 # Import the KiCad python helper module and the csv formatter
 import kicad_netlist_reader
 import kicad_utils
@@ -67,6 +72,64 @@ def myEqu(self, other):
 
     return result
 
+def get_mouser_part_info(part_number):
+    # if part number starts with a quantity, then remove that for part number lookup
+    if str(part_number).lower().startswith("qty:x"):
+        part_number = part_number.split(" ")[1:]
+        part_number = " ".join(part_number)
+    part_data = {}
+    part_data['Mouser PN'] = part_number
+    if str(part_number) in ["", "nan"]:
+        return part_data
+    request = MouserPartSearchRequest('partnumber')
+    request.part_search(part_number)
+    part = request.get_clean_response()
+
+    part_data['Mouser Manufacturer'] = part['Manufacturer']
+    part_data['Mouser Description'] = part['Description']
+    part_data['Mouser Availability'] = part['Availability'].replace(" In Stock", "")
+    part_data['Mouser Category'] = part['Category']
+    part_data['Mouser ManufacturerPartNumber'] = part['ManufacturerPartNumber']
+
+    #store price breaks in form of qty{x}:price; (semi colin seperated list
+    price_breaks = ""
+    for price_break in part['PriceBreaks']:
+        price_breaks += f"{price_break['Quantity']}x:{price_break['Price']}; "
+    price_breaks = price_breaks[:-2]
+    part_data['Mouser PriceBreaks'] = price_breaks
+
+    return part_data
+
+def get_digikey_part_info(part_number):
+    # if part number starts with a quantity, then remove that for part number lookup
+    if str(part_number).lower().startswith("qty:x"):
+        part_number = part_number.split(" ")[1:]
+        part_number = " ".join(part_number)
+    
+    part_data = {}
+    part_data['Digikey PN']  = part_number
+    if str(part_number) in ["", "nan"]:
+        return part_data
+
+    print(f"'{part_number}'")
+    part = digikey.product_details(part_number)
+    print(part)
+    part_data['Digikey Manufacturer'] = part.manufacturer.value
+    part_data['Digikey Description'] = part.detailed_description
+    part_data['Digikey Availability'] = part.quantity_available
+    part_data['Digikey Category'] = part.family.value
+    part_data['Digikey ManufacturerPartNumber'] = part.manufacturer_part_number
+
+    price_breaks = ""
+    for price_break in part.my_pricing:
+        price_breaks += f"{price_break.break_quantity}x:{price_break.unit_price}; "
+    price_breaks = price_breaks[:-2]
+    part_data['Digikey PriceBreaks'] = price_breaks 
+
+    part_data['Digikey URL'] = part.product_url
+    return part_data
+
+
 def add_purchase_info(pn_df, row):
     # Filter pn data frame according to current row in BOM
     for field in comp_fields:
@@ -76,42 +139,50 @@ def add_purchase_info(pn_df, row):
         pn_df = pn_df[pn_df[field] == row[field]]
 
     if len(pn_df) >= 1:
-        row['Mnf PN']     = pn_df.iloc[0]['Mnf PN']
-        row['Mouser PN']  = pn_df.iloc[0]['Mouser PN']
-        row['Digikey PN'] = pn_df.iloc[0]['Digikey PN']
 
-        if str(row['Mouser PN']) not in ["nan", "", "DNP"]:
-            request = MouserPartSearchRequest('partnumber')
-            request.part_search(row['Mouser PN'])
-            part = request.get_clean_response()
-            row['Mouser Manufacturer'] = part['Manufacturer']
-            row['Mouser Description'] = part['Description']
-            price_breaks = ""
-            for price_break in part['PriceBreaks']:
-                price_breaks += f"{price_break['Quantity']}x:{price_break['Price']}; "
-            price_break = price_breaks[:-2]
+        if "DNP" not in str(row['Value']):
+            row = row | \
+                  get_mouser_part_info( pn_df.iloc[0]['Mouser PN']) | \
+                  get_digikey_part_info(pn_df.iloc[0]['Digikey PN'])
+            row['Mnf PN']     = pn_df.iloc[0]['Mnf PN']
 
-            row['Mouser PriceBreaks']  = price_breaks
-            row['Mouser Availability'] = part['Availability'].replace(" In Stock", "")
-
-
+            ##########################################################################
+            # Collect price info for different quantities for both digikey and Mouser
+            ##########################################################################
             for pcb_qty in [1, 10, 100, 1000]:
-                print(row['Mouser PN'])
-                if str(pn_df.iloc[0]['Mouser Parts Needed per Footrprint']) in ["", "nan"]:
-                    qty = row['Qty'] * pcb_qty
-                else:
-                    qty = row['Qty'] * pn_df.iloc[0]['Mouser Parts Needed per Footrprint'] * pcb_qty
+                min_price = 1000000000000
+                for vendor in ["Mouser", "Digikey"]:
+                    if str(row[f'{vendor} PN']).lower().startswith("qty:x"):
+                        qty = row[f'{vendor} PN'].split(":")[0].split(" ")[0]
+                        # number of parts on board times qty of pn per footprint times number of pcbs to purchase
+                        qty = int(qty) * row['Qty'] * pcb_qty
+                    else:
+                        qty = row['Qty'] * pcb_qty
+                    if f'{vendor} PriceBreaks' not in row or str(row[f'{vendor} PriceBreaks']) in ["nan", ""]:
+                        continue
 
-                for price_break in part['PriceBreaks'][::-1]:
-                    print(price_break)
-                    if qty >= price_break['Quantity']:
-                        price = float(price_break['Price'].replace("$", ""))
-                        break
+                    # Loop through price breaks from largest quantity to smallest
+                    print(vendor)
+                    print(row)
+                    print(row[f'{vendor} PN'])
+                    print(row[f'{vendor} PriceBreaks'])
+                    for price_break in row[f'{vendor} PriceBreaks'].split(";")[::-1]:
+                        print(f"'{price_break}'")
+                        price_break_qty = price_break.split("x")[0]
+                        print(price_break_qty)
+                        price_break_qty = int(price_break_qty)
 
-                row[f'Mouser {pcb_qty} PCB Part Price total']  = round(price * qty / pcb_qty, 2)
+                        price_break_price = price_break.split(":")[1].replace("$", "")
+                        price_break_price = float(price_break_price)
 
-            row[f'Mouser single PCB Part Qty'] = qty / 1000
-            
+                        if qty >= price_break_qty:
+                            break
+
+                    row[f'{vendor} {pcb_qty} PCB Part Price total']  = round(price_break_price * qty / pcb_qty, 2)
+                    min_price = min(round(price_break_price * qty / pcb_qty, 2), min_price)
+
+                row[f'{vendor} 1 PCB Order Qty'] = int(qty / 1000)
+                row[f'Cheapest Vendor {pcb_qty} PCB Part Price total']  = min_price
 
     return row
 
@@ -170,6 +241,11 @@ for pcb_qty in [1, 10, 100, 1000]:
     row['PCB Quantity'] = pcb_qty
     row['Mouser Component Cost']       = df_no_dnp[f'Mouser {pcb_qty} PCB Part Price total'].sum()
     row['Mouser Missing Part Numbers'] = df_no_dnp[f'Mouser {pcb_qty} PCB Part Price total'].isna().sum()
+    row['Digikey Component Cost']       = df_no_dnp[f'Digikey {pcb_qty} PCB Part Price total'].sum()
+    row['Digikey Missing Part Numbers'] = df_no_dnp[f'Digikey {pcb_qty} PCB Part Price total'].isna().sum()
+    row['Cheapest Vendor Component Cost']       = df_no_dnp[f'Cheapest Vendor {pcb_qty} PCB Part Price total'].sum()
+    row['Cheapest Vendor Missing Part Numbers'] = df_no_dnp[f'Cheapest Vendor {pcb_qty} PCB Part Price total'].isna().sum()
+
     df_row = pd.DataFrame([row])
     df_summary = pd.concat([df_summary, df_row], ignore_index=True)
 
