@@ -144,6 +144,9 @@ def add_purchase_info(pn_df, row):
             row = row | \
                   get_mouser_part_info( pn_df.iloc[0]['Mouser PN']) | \
                   get_digikey_part_info(pn_df.iloc[0]['Digikey PN'])
+            # This scipt doesn't pull in JLPCB cost information, but does support generating a JLPCB part list to import onto their website
+            print(pn_df.columns)
+            row['JLPCB PN'] = pn_df.iloc[0]['JLPCB PN']
             row['Mnf PN']     = pn_df.iloc[0]['Mnf PN']
 
             ##########################################################################
@@ -151,13 +154,16 @@ def add_purchase_info(pn_df, row):
             ##########################################################################
             for pcb_qty in [1, 10, 100, 1000]:
                 min_price = 1000000000000
-                for vendor in ["Mouser", "Digikey"]:
-                    if str(row[f'{vendor} PN']).lower().startswith("qty:x"):
-                        qty = row[f'{vendor} PN'].split(":")[0].split(" ")[0]
+                for vendor in ["Mouser", "Digikey", "JLPCB"]:
+                    if str(pn_df.iloc[0][f'{vendor} PN']).lower().startswith("qty:x"):
+                        qty = pn_df.iloc[0][f'{vendor} PN'].split(":")[1].split(" ")[0]
+                        qty = qty.lower().replace("x", "").strip()
                         # number of parts on board times qty of pn per footprint times number of pcbs to purchase
                         qty = int(qty) * row['Qty'] * pcb_qty
                     else:
                         qty = row['Qty'] * pcb_qty
+
+                    row[f'{vendor} 1 PCB Order Qty'] = int(qty / 1000)
                     if f'{vendor} PriceBreaks' not in row or str(row[f'{vendor} PriceBreaks']) in ["nan", ""]:
                         continue
 
@@ -181,8 +187,8 @@ def add_purchase_info(pn_df, row):
                     row[f'{vendor} {pcb_qty} PCB Part Price total']  = round(price_break_price * qty / pcb_qty, 2)
                     min_price = min(round(price_break_price * qty / pcb_qty, 2), min_price)
 
-                row[f'{vendor} 1 PCB Order Qty'] = int(qty / 1000)
                 row[f'Cheapest Vendor {pcb_qty} PCB Part Price total']  = min_price
+
 
     return row
 
@@ -235,7 +241,14 @@ for index, group in enumerate(grouped):
 
 df_summary = pd.DataFrame()
 row = {}
+# Make Quantity an integer
+for c in df.filter(like="Qty").columns:
+    df[c] = df[c].fillna(0.0)
+    df[c] = df[c].astype(int)
+
 df_no_dnp = df[df['Mouser PN'] != "DNP"]
+df_no_dnp = df_no_dnp[df_no_dnp['Value'] != "DNP"]
+df_no_dnp = df_no_dnp[~df_no_dnp['Value'].str.startswith("DNP_")]
 
 for pcb_qty in [1, 10, 100, 1000]:
     row['PCB Quantity'] = pcb_qty
@@ -249,6 +262,30 @@ for pcb_qty in [1, 10, 100, 1000]:
     df_row = pd.DataFrame([row])
     df_summary = pd.concat([df_summary, df_row], ignore_index=True)
 
+##############################################
+# Create spreadsheet specific to Digikey
+##############################################
+df_digikey_list = df_no_dnp.copy()
+df_digikey_list = df_digikey_list[["Digikey PN", "Reference", "Footprint", "Value", "Voltage", "Type", "Digikey 1 PCB Order Qty", "Digikey 1 PCB Part Price total"]]
+df_digikey_list = df_digikey_list.rename(columns={"Digikey 1 PCB Order Qty": "Order Quantity", "Digikey 1 PCB Part Price total": "Total Price"})
+
+##############################################
+# Create spreadsheet specific to Mouser
+##############################################
+df_mouser_list = df_no_dnp.copy()
+df_mouser_list = df_mouser_list[["Mouser PN", "Reference", "Footprint", "Value", "Voltage", "Type", "Mouser 1 PCB Order Qty", "Mouser 1 PCB Part Price total"]]
+df_mouser_list = df_mouser_list.rename(columns={"Mouser PN": "Mouser Part Number", "Mouser 1 PCB Order Qty": "Quantity 1", "Mouser 1 PCB Part Price total": "Total Price"})
+    
+##############################################
+# Create spreadsheet specific to JLPCB
+##############################################
+df_jlpcb_list = df_no_dnp.copy()
+df_jlpcb_list = df_jlpcb_list[["Reference", "Footprint", "Value", "Voltage", "Type", "JLPCB PN", "JLPCB 1 PCB Order Qty"]]
+df_jlpcb_list = df_jlpcb_list.rename(columns={"JLPCB PN": "LCSC Part #", "Reference": "Designator"})
+
+##############################################
+# Save Spreadsheets to respective files
+##############################################
 try:
     df.to_csv(sys.argv[2], index=False)
 except:
@@ -258,3 +295,18 @@ try:
     df_summary.to_csv(os.path.dirname(sys.argv[2]) + "/BOM_Summary.csv", index=False)
 except:
     print(f"{sys.dirname(os.path.argv[2]) + '/BOM_Summary.csv'} Open, close it and re-run BOM tool")
+
+try:
+    df_digikey_list.to_csv(os.path.dirname(sys.argv[2]) + "/Digikey_Part_List.csv", index=False)
+except:
+    print(f"{sys.dirname(os.path.argv[2]) + '/Digikey_Part_List.csv'} Open, close it and re-run BOM tool")
+
+try:
+    df_mouser_list.to_csv(os.path.dirname(sys.argv[2]) + "/Mouser_Part_List.csv", index=False)
+except:
+    print(f"{sys.dirname(os.path.argv[2]) + '/Mouser_Part_List.csv'} Open, close it and re-run BOM tool")
+
+try:
+    df_jlpcb_list.to_csv(os.path.dirname(sys.argv[2]) + "/JLPCB_Part_List.csv", index=False)
+except:
+    print(f"{sys.dirname(os.path.argv[2]) + '/JLPCB_Part_List.csv'} Open, close it and re-run BOM tool")

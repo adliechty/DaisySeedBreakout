@@ -1,0 +1,36 @@
+Designator,Footprint,Value,Voltage,Type,LCSC Part #,JLPCB 1 PCB Order Qty
+A1,DaisySeedThroughHold:Electrosmith_Daisy_Seed,Electrosmith_Daisy_Seed_Rev4,,,HAND PLACE,1
+"C1, C2, C3, C6, C8, C9, C10, C14, C15, C16, C18, C22, C23, C24, C25, C26",Capacitor_SMD:C_0603_1608Metric,0.1uF,6V,X5R,C14663,16
+"C4, C5, C11, C12, C13, C17",Capacitor_SMD:C_0805_2012Metric,10U,16V,X5R,C15850,6
+C19,Capacitor_SMD:C_1210_3225Metric,100uF,6V,X5R,C191180,1
+C27,Capacitor_SMD:C_0603_1608Metric,100pF,6V,COG,C14858,1
+C28,Capacitor_SMD:C_0603_1608Metric,1uF,6V,X5R,C15849,1
+D1,Diode_SMD:D_SOD-323,D_Schottky,,,C191023,1
+"D2, D3",Diode_SMD_AKL:D_SMC,SS54,,5A:0.7V,C669016,2
+"J1, J3, J10, J14",FemaleHeaders:PinHeader_1x03_P2.54mm_Vertical_Female,Conn_01x03,,,C146243,4
+"J2, J6, J8, J9, J11, J12, J13, J16, J17, J25, J26",1x2FemaleVertical:PinHeader_1x02_P2.54mm_VerticalFemale,Conn_01x02,,,C124411,11
+J4,microSDVertical:CONN_PJS008U-3000-0_YAM,Micro_SD_Card,,,HAND PLACE,1
+"J5, J7, J20",FemaleHeaders:PinHeader_1x04_P2.54mm_Vertical_Female,Conn_01x04,,,C124413,3
+J15,Connector_USB:USB_Micro-B_Molex-105017-0001,USB_B_Micro,,,HAND PLACE,1
+"J18, J21",FemaleHeaders:PinHeader_2x04_P2.54mm_Vertical_Female,Conn_02x04,,,C124422,2
+J19,Ultralibrarian:PinHeader_1x06_P2.54mm_Vertical_Female,Conn_01x06,,,C124415,1
+J23,2x10FemaleHeader:PinHeader_2x10_P2.54mm_Vertical,Pins_02x10_P2.54mm_TH,,,C2685085,1
+J24,FemaleHeaders:PinHeader_1x10_P2.54mm_Vertical_Female,Conn_01x10,,,C225507,1
+"R1, R2, R3, R4, R14",Resistor_SMD:R_0603_1608Metric,47k,,,C25819,5
+"R5, R7, R9, R10, R15, R16, R21, R22, R23, R24, R25, R30, R31, R67",Resistor_SMD:R_0603_1608Metric,1M,,,C22935,14
+"R6, R11, R20",Resistor_SMD:R_0603_1608Metric,10k,,,C25804,3
+"R8, R56, R59, R62, R66",Resistor_SMD:R_0603_1608Metric,0,,,C21189,5
+"R12, R13",Resistor_SMD:R_0603_1608Metric,2.2k,,,C4190,2
+R17,Resistor_SMD:R_0603_1608Metric,100k,,,C25803,1
+"R18, R19",Resistor_SMD:R_0603_1608Metric,100,,,C22775,2
+"R32, R33",Resistor_SMD:R_0603_1608Metric,4.7k,,,C23162,2
+R52,Resistor_SMD:R_0603_1608Metric,10,,,C22859,1
+R53,Resistor_SMD:R_0603_1608Metric,33,,,C23140,1
+R54,Resistor_SMD:R_0603_1608Metric,220,,,C22962,1
+R55,Resistor_SMD:R_0603_1608Metric,470,,,C23179,1
+U1,digikey-footprints:DIP-6_W7.62mm,H11L1M,,,C16587,1
+U2,digikey-footprints:SOT-353,MAX4466EXK_T,,,C7456762,1
+U3,Ultralibrarian:D8_TEX,~,,,C206212,1
+U4,Package_LGA:LGA-12_2x2mm_P0.5mm,LIS2DE12,,,C155639,1
+U7,D0008A_N,TLV9062IDR,,,C398355,1
+U10,DRT3,TPD2EUSB30ADRTR,,,C2997271,1
