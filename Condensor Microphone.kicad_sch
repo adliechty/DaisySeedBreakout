@@ -538,6 +538,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 17a4a7ec-610b-4657-9fc7-d2cce0c15c09)
   )
+  (text "Microphone Heirarchical sheet" (at 116.84 30.48 0)
+    (effects (font (size 2.27 2.27)) (justify left bottom))
+    (uuid b11de5d5-f14a-41e6-9586-7ccb82e1bbcc)
+  )
 
   (label "MIC_IN-" (at 143.51 80.01 0) (fields_autoplaced)
     (effects (font (size 0.75 0.75)) (justify left bottom))

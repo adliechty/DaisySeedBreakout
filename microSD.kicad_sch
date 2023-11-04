@@ -454,6 +454,11 @@
     (uuid f7e4bce6-4caf-4e59-9a56-964223c1b300)
   )
 
+  (text "MicroSD Heirarchical sheet" (at 138.43 31.75 0)
+    (effects (font (size 2.27 2.27)) (justify left bottom))
+    (uuid b02cf9be-67ab-4389-bb2c-bfd7fb931121)
+  )
+
   (hierarchical_label "D2" (shape bidirectional) (at 104.14 76.2 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 06f6c694-576e-4ff8-b5b3-fbe80d686d67)
