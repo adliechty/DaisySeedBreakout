@@ -1,4 +1,4 @@
-Comment,Footprint,LCSC Part #,,,
+Comment,Footprint,LCSC Part #,Mnf PN,,
 Electrosmith_Daisy_Seed_Rev4 Daisy is an embedded platform for music.,Electrosmith_Daisy_Seed,HAND PLACE,,,
 0.1uF 0402 Unpolarized capacitor,C_0402_1005Metric,C1525,,,
 10U Unpolarized capacitor,C_0805_2012Metric,C15850,,,
@@ -7,7 +7,7 @@ DNP_100uF Unpolarized capacitor,C_1210_3225Metric,DNP,,,
 100pF COG Unpolarized capacitor,C_0402_1005Metric,C1546,,,
 1uF Unpolarized capacitor,C_0603_1608Metric,C15849,,,
 DNP Unpolarized capacitor,C_0402_1005Metric,DNP,,,
-"SS54 SMC Schottky diode, 40V, 5A, Alternate KiCAD Library",D_SMA,C22452,,,
+"SS54 SMC Schottky diode, 40V, 5A, Alternate KiCAD Library",D_SMA,C22452,SS54FSH,,
 MountingHole Mounting Hole without connection,MountingHole_3.2mm_M3_DIN965_Pad,DNP,,,
 Conn_01x03 HEADER 1x3 MALE PINS 0.100” 180deg,PinHeader_1x03_P2.54mm_Vertical_Female,HAND PLACE,,,
 Conn_01x02 HEADER 1x2 MALE PINS 0.100” 180deg,PinHeader_1x02_P2.54mm_VerticalFemale,HAND PLACE,,,
@@ -39,8 +39,8 @@ TLV9062IDR ,D0008A_N,C398355,,,
 TPD2EUSB30ADRTR ,DRT3,C2997271,,,
 "D_Schottky Schottky diode, small symbol",D_SOD-323,C191023,,,
 5027740891 ,CONN9_0185-02_GSW,C5155564,,,
-,,,,,
-daisy seed header,,HAND PLACE: M20-7862042,2,1.90,3.8
+Micro_SD_Card Micro SD Card Socket,CONN_PJS008U-3000-0_YAM,,,,
+daisy seed header,,HAND PLACE: RS1-10-G,4,0.54,2.16
 2x10 header,,HAND PLACE: RS2-20-G,1,0.918,.918
 1x10 header,,HAND Place:  RS1-10-G,1,0.54,.54
 1x3 header,,HAND Place:  RS1-03-G,4,0.165,0.66
